@@ -27,9 +27,39 @@ A sample input for the above grid will as follows:
 4 2
 2 3
 3 3
-3 5
-4 5
 
 The output should be the sequence of moves (L,R,U,or D)
+
+# Solution
+
+Find the shortest path from a start position to the closest goal position on a grid with obstacles. The robot can move up, down, left, or right (no diagonals). I will use the A* search algorithm with an admissible heuristic.
+
+## A* algorithm
+A* algorithm is an informed search algorithm, leverages a heuristic function to guide its search towards the goal. This heuristic function estimates the cost of reaching the goal from a given node, allowing the algorithm to prioritize promising paths.
+
+The A* algorithm's efficiency comes from its smart evaluation of paths using three key components: g(n), h(n), and f(n). These components work together to guide the search process toward the most promising paths.
+
+
+
+# Step-by-Step Explanation
+
+- Input Reading: The program reads the grid dimensions, start position, goal positions, and blocked cells.
+
+- Admissible Heuristic: For multiple goals, we need a heuristic that underestimates the distance to the closest goal.
+
+- Heuristic Function: For any cell (r, c), it calculates the Manhattan distance to all goals and returns the minimum value.
+
+- A Search*:
+
+-- Uses a priority queue (min-heap) to explore nodes with the lowest f(n) = g(n) + h(n) first.
+-- g(n) is the actual cost from start to current node.
+-- h(n) is the heuristic estimate to the closest goal.
+-- For each move, checks if the new position is valid (within bounds and not blocked).
+
+- Track the path: Use a parent dictionary to reconstruct the path once a goal is found.
+
+- Termination: When a goal is reached, returns the path. If the queue is exhausted without finding a goal, returns an empty path (though the problem assumes a path exists)
+
+
 
 
