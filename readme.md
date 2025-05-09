@@ -51,10 +51,10 @@ The A* algorithm's efficiency comes from its smart evaluation of paths using thr
 
 - A Search*:
 
--- Uses a priority queue (min-heap) to explore nodes with the lowest f(n) = g(n) + h(n) first.
--- g(n) is the actual cost from start to current node.
--- h(n) is the heuristic estimate to the closest goal.
--- For each move, checks if the new position is valid (within bounds and not blocked).
+-  Uses a priority queue (min-heap) to explore nodes with the lowest f(n) = g(n) + h(n) first.
+-  g(n) is the actual cost from start to current node.
+-  h(n) is the heuristic estimate to the closest goal.
+-   or each move, checks if the new position is valid (within bounds and not blocked).
 
 - Track the path: Use a parent dictionary to reconstruct the path once a goal is found.
 
