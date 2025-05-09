@@ -1,0 +1,11 @@
+Path: DDDDRRRU
+
+Grid:
+   0 1 2 3 4 5
+  +------------+
+0 |S X       G|
+1 |D X        |
+2 |D X        |
+3 |D X X G X  |
+4 |D R R R G  |
+  +------------+
